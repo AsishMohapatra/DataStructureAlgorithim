@@ -21,3 +21,6 @@ Time Complexity is O(n)
 2. Print using Iteration  ->  O(n)
 3. Insert at the beginning => Time Complexisty is O(1)
 4. Insert at the End => Traverse to the end and then add the node => O(n)
+		Special case when head is null that means new node will become the head.
+5. Deleting from head i.e. Changing the head pointer to next. Time Complexity O(1)
+6. Deleting from tail is O(n) 

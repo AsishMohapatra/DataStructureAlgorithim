@@ -7,12 +7,28 @@ namespace LinkedListPractise
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+            
             var head=InitialiseNodesInALinkedList();
+            //head = DeleteHead(head);
             head=InsertAtBeginning(head, 40);
             head = InsertAtBeginning(head, 30);
             head = InsertAtEnd(head, 95);
             head = InsertAtBeginning(head, 10);
             head = InsertAtEnd(head, 100);
+            PrintLinkedListUsingrecursion(head);
+            head = DeleteHead(head);
+            PrintLinkedListUsingrecursion(head);
+            head = DeleteTail(head);
+            head = DeleteTail(head);
+            head = DeleteTail(head);
+            head = DeleteTail(head);
+            head = DeleteTail(head);
+            head = DeleteTail(head);
+            head = DeleteTail(head);
+            head = DeleteTail(head);
+            head = DeleteTail(head);
+            head = DeleteTail(head);
+
             //PrintLinkedList(head);
             PrintLinkedListUsingrecursion(head);
 
@@ -51,10 +67,11 @@ namespace LinkedListPractise
         /// <param name="headNode"></param>
         public static void PrintLinkedListUsingrecursion(Node<int> headNode)
         {
-            Console.WriteLine($"Node data ::  {headNode.Data}");
-            if (headNode.NextNode == null)
+            if (headNode == null)
                 return;
+            Console.Write($"{headNode.Data} ");
             PrintLinkedListUsingrecursion(headNode.NextNode);
+            Console.WriteLine();
         }
 
         public static Node<int> InsertAtBeginning(Node<int> headNode,int x)
@@ -67,6 +84,8 @@ namespace LinkedListPractise
         public static Node<int> InsertAtEnd(Node<int> headNode, int x)
         {
             Node<int> endNode = new Node<int>(x);
+            if (headNode == null)
+                return endNode;
             var currentNode = headNode;
             while (currentNode.NextNode != null)
             {
@@ -76,5 +95,31 @@ namespace LinkedListPractise
             currentNode.NextNode = endNode;
             return headNode;
         }
+
+        public static Node<int> DeleteHead(Node<int> headNode)
+        {
+            Console.WriteLine("Deleting Head item");
+            if (headNode == null) return null;
+            var oldHead = headNode;
+            headNode = headNode.NextNode;
+            oldHead = null;
+            return headNode;
+        }
+
+        public static Node<int> DeleteTail(Node<int> headNode)
+        {
+            Console.WriteLine("Deleting tail item");
+            if (headNode == null || headNode.NextNode==null) return null;
+            var currentNode = headNode;
+            Node<int> previousNode = null;
+            while (currentNode.NextNode != null)
+            {
+                previousNode = currentNode;
+                currentNode = currentNode.NextNode;
+            }
+            previousNode.NextNode = null;
+            return headNode;
+        }
+
     }
 }
