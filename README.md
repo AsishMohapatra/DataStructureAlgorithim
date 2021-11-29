@@ -1,2 +1,1 @@
-# DataStructureAlgorithim
-Data Structure Algorithim DSA
+# DataStructureAndAlgorithm
