@@ -12,3 +12,12 @@ NO need for contiguous memory allocation.
 No need to prereserve space.
 Insertion and deletion can happen in the middle and not costly.
 Self Referential data structure
+
+Traversing a linked list
+------------------------
+Time Complexity is O(n)
+
+1. Print using While Loop ->  O(n)
+2. Print using Iteration  ->  O(n)
+3. Insert at the beginning => Time Complexisty is O(1)
+4. Insert at the End => Traverse to the end and then add the node => O(n)
