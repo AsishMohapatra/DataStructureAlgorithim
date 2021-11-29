@@ -11,3 +11,4 @@ Linked List
 NO need for contiguous memory allocation.
 No need to prereserve space.
 Insertion and deletion can happen in the middle and not costly.
+Self Referential data structure
