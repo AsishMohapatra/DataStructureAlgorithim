@@ -1,0 +1,13 @@
+Array is a linear data structure and memory are reserved continuously but linked list is not.
+Arraylist Store items continuously.
+
+  Fixed size arrays and pre allocated memory.
+  Insertion / deletion in the beginning is costly.
+  Implementation of Stack and queue is difficult as insertion / deltion.
+
+
+Linked List
+-----------
+NO need for contiguous memory allocation.
+No need to prereserve space.
+Insertion and deletion can happen in the middle and not costly.
